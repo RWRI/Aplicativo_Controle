@@ -19,9 +19,7 @@ public class Histograma extends JPanel {
         qnt.clear();
         for(int i = 0; i < dados.size();i++){
             qnt.add(dados.get(i).getQnt_leite());
-            System.out.println(qnt.get(i));
         }
-        System.out.println(dados.size());
         repaint();
     }
 
