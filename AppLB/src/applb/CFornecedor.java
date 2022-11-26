@@ -62,6 +62,6 @@ public class CFornecedor extends JPanel {
     
     @Override
     public Dimension getPreferredSize(){
-        return new Dimension(400,110);
+        return new Dimension(520,110);
     }
 }

@@ -48,8 +48,15 @@ public class AppLB extends JFrame{
         arq.add(itemSobre);
         itemSobre.addActionListener( e -> {
                 JOptionPane.showMessageDialog(AppLB.this,
-                "                         APLICATIVO LATÍCINIO BENATA\n\n"
-                        + "DESENVOLVEDOR: Ryan Wyllyan Ribeiro Inacio - 2022",
+                "                 APLICATIVO LATÍCINIO BENATA\n\n"
+                        +"            Aplicativo  Desenvolvido e Projetado\n"
+                        +"para discilplina de Engenharia de Software 2022.2\n\n"
+                        +"Desenvolvedores:\n"
+                        +"   Bárbara de Alves Paiva Barbosa\n"
+                        +"   Luiz Guilherme de Godoy Gerulaitis\n"
+                        +"   Maíssa Maniezzo de Oliveira\n"
+                        +"   Maria Clara Martins Santana\n"
+                        +"   Ryan Wyllyan Ribeiro Inácio\n",
                 "Sobre", JOptionPane.PLAIN_MESSAGE);
         });
         arq.addSeparator();
@@ -142,6 +149,27 @@ public class AppLB extends JFrame{
             forne.pack();
             JP.add(forne);
             forne.setVisible(true);
+        });
+
+        JMenu graficos = new JMenu("Gráficos");
+        barra.add(graficos);
+        JMenuItem grafForne = new JMenuItem ( "Gŕafico por fornecedor");
+        graficos.add(grafForne);
+        grafForne.addActionListener(e ->{
+            JInternalFrame graf = new JInternalFrame("Gráfico por fornecedor", true, true, true, false);
+            graf.add(new GraficosForne());
+            graf.pack();
+            JP.add(graf);
+            graf.setVisible(true);
+        });
+        JMenuItem grafMes = new JMenuItem ( "Gŕafico por mês");
+        graficos.add(grafMes);
+        grafMes.addActionListener(e ->{
+            JInternalFrame graf = new JInternalFrame("Gráfico por mês", true, true, true, false);
+            graf.add(new GraficosMes());
+            graf.pack();
+            JP.add(graf);
+            graf.setVisible(true);
         });
     }
     

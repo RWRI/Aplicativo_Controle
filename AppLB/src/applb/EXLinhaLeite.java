@@ -10,7 +10,7 @@ import java.awt.*;
 import java.util.*;
 
 public class EXLinhaLeite extends JPanel{
-    private ArrayList<LinhaLeite> linha = new ArrayList<>(), nlinha= new ArrayList<>();
+    private ArrayList<LinhaLeite> linha = new ArrayList<>();
     private JButton excluir = new JButton("Excluir Dados");
     private JCheckBox[] dia = new JCheckBox[31];
     private JTextField[] qntLeite  =  new JTextField[31], pl =  new JTextField[31];

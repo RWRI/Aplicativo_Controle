@@ -25,7 +25,7 @@ public class ToldLinhaLeite extends JPanel{
         top.add(anos);
         top.add(meses);
         add(top,BorderLayout.NORTH);
-
+        
         fornecedores = Acesso.selectFornedorLinhaLeite(regulaDia());
         
         int qnt = fornecedores.size();
@@ -54,8 +54,9 @@ public class ToldLinhaLeite extends JPanel{
         fornecedores = Acesso.selectFornedorLinhaLeite(regulaDia());
         
         for(Fornecedor f : fornecedores){
-            System.out.println(f.getNome());
+             System.out.println(f.getNome());
         }
+        System.out.println(fornecedores.size());
         
         if(fornecedores.size() >= paineis.size()){
             for(int i = 0;i < paineis.size();i++){

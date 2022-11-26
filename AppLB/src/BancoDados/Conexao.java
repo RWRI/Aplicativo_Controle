@@ -14,7 +14,7 @@ public class Conexao extends JPanel {
     private static final String driver = "com.mysql.jdbc.Driver";
     private static final String url = "jdbc:mysql://localhost:3306/laticiniobenata";
     private static final String user = "lb";
-    private static final String pass = "Benata";
+    private static final String pass = "Benata@123";
     
     public Conexao(){};
     

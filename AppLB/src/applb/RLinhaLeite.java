@@ -9,7 +9,6 @@ import java.awt.*;
 import java.util.*;
 
 public class RLinhaLeite extends JPanel{
-    private ArrayList<OldLinhaLeite> paineis = new ArrayList<>();
     private final String[] an = {"2022","2023","2024","2025","2026","2027","2028","2029","2030"};
     private final JComboBox anos = new JComboBox(an);
     private final String[] nm = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",

@@ -9,7 +9,7 @@ import java.awt.*;
 import java.util.*;
 
 public class OldLinhaLeite extends JPanel{
-    private ArrayList<LinhaLeite> linha = new ArrayList<>(), nlinha= new ArrayList<>();
+    private ArrayList<LinhaLeite> linha = new ArrayList<>();
     private JLabel[] dia = new JLabel[31];
     private JLabel[] qntLeite  =  new JLabel[31], pl =  new JLabel[31];
     private String fornec;

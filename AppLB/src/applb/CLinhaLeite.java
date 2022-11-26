@@ -20,6 +20,9 @@ public class CLinhaLeite extends JPanel {
     private JButton salvar = new JButton("Salvar dados linha de leite");
     int qt = 0;
     
+    /**
+     * 
+     */
     public CLinhaLeite(){
         setLayout(new BorderLayout(5,5));
         
@@ -106,7 +109,7 @@ public class CLinhaLeite extends JPanel {
     
     @Override
     public Dimension getPreferredSize(){
-        return new Dimension(380,100+30*qt);
+        return new Dimension(450,100+30*qt);
     }
     
     public void salve(){

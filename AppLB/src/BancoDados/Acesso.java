@@ -260,7 +260,7 @@ public class Acesso {
         ResultSet rs = null;
         
         try {
-            stmt = con.prepareStatement("Select fornecedor, preco from linhaleite where dia like ?"
+            stmt = con.prepareStatement("Select fornecedor from linhaleite where dia like ?"
                     + "group by fornecedor order by fornecedor");
             
             stmt.setString(1, d+"%");
@@ -268,7 +268,7 @@ public class Acesso {
             rs = stmt.executeQuery();
             
             while(rs.next()){
-                qntLeite.add(new Fornecedor(rs.getString("fornecedor"),rs.getDouble("preco")));
+                qntLeite.add(new Fornecedor(rs.getString("fornecedor"),0.0));
             }  
         } catch (SQLException ex) {
             Logger.getLogger(Acesso.class.getName()).log(Level.SEVERE, null, ex);
