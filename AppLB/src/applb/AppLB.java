@@ -93,16 +93,7 @@ public class AppLB extends JFrame{
             JP.add(forne);
             forne.setVisible(true);
         });
-        JMenuItem rfornecedor = new JMenuItem ( "Relações Mensais Fornecedores");
-        fornecedores.add(rfornecedor);
-        rfornecedor.addActionListener(e ->{
-            JInternalFrame forne = new JInternalFrame("Relações Mensais Fornecedores", true, true, true, false);
-            forne.add(new PFornecedor());
-            forne.pack();
-            JP.add(forne);
-            forne.setVisible(true);
-        });
-        
+
         JMenu linha = new JMenu("Linha de Leite");
         barra.add(linha);
         JMenuItem linhaleite = new JMenuItem ( "Cadastrar Linha de Leite");
@@ -123,7 +114,7 @@ public class AppLB extends JFrame{
             JP.add(forne);
             forne.setVisible(true);
         });
-        JMenuItem exlinhaleite = new JMenuItem ( "Exluir dados Linha de Leite");
+        JMenuItem exlinhaleite = new JMenuItem ( "Excluir dados Linha de Leite");
         linha.add(exlinhaleite);
         exlinhaleite.addActionListener(e ->{
             JInternalFrame forne = new JInternalFrame("Dados da Linha de Leite Cadastrados", true, true, false, false);
@@ -137,15 +128,6 @@ public class AppLB extends JFrame{
         oldlinhaleite.addActionListener(e ->{
             JInternalFrame forne = new JInternalFrame("Dados da Linha de Leite Cadastrados", true, true, false, false);
             forne.add(new ToldLinhaLeite());
-            forne.pack();
-            JP.add(forne);
-            forne.setVisible(true);
-        });
-        JMenuItem rlinhaleite = new JMenuItem ( "Relacao Mensal Linha de Leite");
-        linha.add(rlinhaleite);
-        rlinhaleite.addActionListener(e ->{
-            JInternalFrame forne = new JInternalFrame("Quantidades e Preços Mensais da Linha de Leite", true, true, false, false);
-            forne.add(new RLinhaLeite());
             forne.pack();
             JP.add(forne);
             forne.setVisible(true);
@@ -170,6 +152,27 @@ public class AppLB extends JFrame{
             graf.pack();
             JP.add(graf);
             graf.setVisible(true);
+        });
+
+        JMenu recibos = new JMenu("Recibos");
+        barra.add(recibos);        
+        JMenuItem rfornecedor = new JMenuItem ( "Relações Mensais Fornecedores");
+        recibos.add(rfornecedor);
+        rfornecedor.addActionListener(e ->{
+            JInternalFrame forne = new JInternalFrame("Relações Mensais Fornecedores", true, true, true, false);
+            forne.add(new PFornecedor());
+            forne.pack();
+            JP.add(forne);
+            forne.setVisible(true);
+        });
+        JMenuItem rlinhaleite = new JMenuItem ( "Relacao Mensal Linha de Leite");
+        recibos.add(rlinhaleite);
+        rlinhaleite.addActionListener(e ->{
+            JInternalFrame forne = new JInternalFrame("Quantidades e Preços Mensais da Linha de Leite", true, true, false, false);
+            forne.add(new RLinhaLeite());
+            forne.pack();
+            JP.add(forne);
+            forne.setVisible(true);
         });
     }
     
